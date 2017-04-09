@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class Board extends Component {
+export default class Board extends Component {
   constructor(){
     super()
   }
