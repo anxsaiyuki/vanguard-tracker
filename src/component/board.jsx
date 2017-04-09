@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import '../css/board.css';
+
 export default class Board extends Component {
   constructor(){
     super()
@@ -8,7 +10,7 @@ export default class Board extends Component {
 
   render() {
     return (
-      <div>
+      <div id="board">
         Board
       </div>
     )
