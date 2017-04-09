@@ -9,25 +9,48 @@ export default class Option extends Component {
   constructor(){
     super();
 
+    var powers = [];
+    for (var powerMutiplier = 1; powerMutiplier < POWER_LIMIT+1 ; powerMutiplier++) {
+      powers.push(powerMutiplier*POWER_INTERVAL);
+    }
 
     this.state = {
-      power: []
+      powers: powers,
+      sign: '+'
     }
   }
 
+
+  powerClick(power) {
+    console.log("POWER LEVEL: ", power);
+  }
+
+  toggleSign(){
+    console.log("my sign is");
+  }
+
+  critClick(){
+    console.log("clicked on crit");
+  }
+
+
   render() {
 
-    let optionItem = this.state.power.map(function(item){
+    var context = this;
+    let powerItem = this.state.powers.map( function(item) {
       return (
-        <li className="optionItem">{item}</li>
+        <li className="option-item" key={ item } onClick={ context.powerClick.bind(context, item) } >{ item }</li>
       )
     });
 
     return (
-      <div id="optionWrapper">
+      <div id="option-wrapper">
         Option
-        <ul id="optionList">
-          {optionItem}
+        <ul id="option-list">
+          <li className="option-item" onClick={ this.toggleSign() } >{ this.state.sign }</li>
+          { powerItem }
+          <li className="option-item" onClick={ this.critClick() } > Critical </li>
+
         </ul>
       </div>
     )
