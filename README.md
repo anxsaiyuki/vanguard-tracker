@@ -1,1 +1,1 @@
-# vanguard-tracker
+# vg-tracker
