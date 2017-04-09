@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Board from './component/board';
 
 class Index extends Component {
   constructor(){
@@ -9,6 +10,7 @@ class Index extends Component {
   render() {
     return (
       <div>
+        <Board />
       </div>
     )
   }
