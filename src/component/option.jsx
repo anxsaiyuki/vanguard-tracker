@@ -25,8 +25,8 @@ export default class Option extends Component {
     console.log("POWER LEVEL: ", power);
   }
 
-  toggleSign(){
-    console.log("my sign is");
+  toggleSign(sign){
+    console.log("my sign is: ", sign);
   }
 
   critClick(){
@@ -47,10 +47,9 @@ export default class Option extends Component {
       <div id="option-wrapper">
         Option
         <ul id="option-list">
-          <li className="option-item" onClick={ this.toggleSign() } >{ this.state.sign }</li>
+          <li className="option-item" onClick={ this.toggleSign.bind(this, this.state.sign) } >{ this.state.sign }</li>
           { powerItem }
-          <li className="option-item" onClick={ this.critClick() } > Critical </li>
-
+          <li className="option-item" onClick={ this.critClick.bind(this) } > Critical </li>
         </ul>
       </div>
     )
