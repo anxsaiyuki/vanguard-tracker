@@ -26,7 +26,11 @@ export default class Option extends Component {
   }
 
   toggleSign(sign){
-    console.log("my sign is: ", sign);
+    if(!sign || sign === "+"){
+      this.setState({sign: '-'});
+    } else {
+      this.setState({sign: '+'});
+    }
   }
 
   critClick(){
