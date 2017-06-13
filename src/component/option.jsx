@@ -43,7 +43,7 @@ export default class Option extends Component {
     var context = this;
     let powerItem = this.state.powers.map( function(item) {
       return (
-        <li className="option-item" key={ item } onClick={ context.powerClick.bind(context, item) } >{ item }</li>
+        <li unselectable="on" className="option-item" key={ item } onClick={ context.powerClick.bind(context, item) } >{ item }</li>
       )
     });
 
@@ -51,9 +51,9 @@ export default class Option extends Component {
       <div id="option-wrapper">
         Option
         <ul id="option-list">
-          <li className="option-item" onClick={ this.toggleSign.bind(this, this.state.sign) } >{ this.state.sign }</li>
+          <li unselectable="on" className="option-item" onClick={ this.toggleSign.bind(this, this.state.sign) } >{ this.state.sign }</li>
           { powerItem }
-          <li className="option-item" onClick={ this.critClick.bind(this) } > Critical </li>
+          <li unselectable="on" className="option-item" onClick={ this.critClick.bind(this) } > Critical </li>
         </ul>
       </div>
     )
