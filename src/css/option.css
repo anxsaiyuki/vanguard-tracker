@@ -4,8 +4,9 @@
 }
 
 #option-list{
-	/*border-radius: 16px;*/
+	border-radius: 10px;
     border: 1px solid #ccc!important;
+    padding: 0px;
 }
 
 .option-item{
@@ -17,6 +18,7 @@
 	/* Rules below not implemented in browsers yet */
 	-o-user-select: none;
 	user-select: none;
+	padding-left: 30%;
 }
 
 li+li.option-item{
