@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Board from './component/board';
 import Option from './component/option';
+import Ads from './component/ads';
 
 class Index extends Component {
   constructor(){
@@ -13,6 +14,7 @@ class Index extends Component {
       <div>
         <Board />
         <Option />
+        <Ads />
       </div>
     )
   }
